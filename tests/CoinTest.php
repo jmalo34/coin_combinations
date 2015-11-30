@@ -13,22 +13,22 @@
             $result = $test_change->changeDue($input);
 
             //Assert
-            $this->assertEquals('4 pennies', $result);
+            $this->assertEquals('0 quarters, 0 dimes, 0 nickels, 4 pennies', $result);
         }
-        //
-        // function test_change_nickel()
-        // {
-        //     //Arrange
-        //     $test_change = new Coin();
-        //     $input =;
-        //
-        //     //Act
-        //     $result = $test_change->changeDue($input);
-        //
-        //     //Assert
-        //     $this->assertEquals('', $result);
-        // }
-        //
+
+        function test_change_nickel()
+        {
+            //Arrange
+            $test_change = new Coin();
+            $input = 9;
+
+            //Act
+            $result = $test_change->changeDue($input);
+
+            //Assert
+            $this->assertEquals('0 quarters, 0 dimes, 1 nickels, 4 pennies', $result);
+        }
+
         // function test_change_dime()
         // {
         //     //Arrange
