@@ -15,8 +15,8 @@
 
     $app->get('combination', function() use ($app)
     {
-        $my_Coin = new Coin(...);
-        $combinations = $my_Coin->change($_GET..);
+        $my_Coin = new Coin;
+        $combinations = $my_Coin->changeDue($_GET['amount']);
         return $app['twig']->render('combination.html.twig', array('combinations' => $combinations));
     });
 

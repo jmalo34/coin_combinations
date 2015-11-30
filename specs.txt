@@ -1,7 +1,19 @@
-SPEC 1:
-Input:
-Output:
+SPEC 1:  If change due is less than 5 cents, the user is given a number of pennies equal to change due
+Input:  03
+Output:  3 pennies
 
-SPEC 2:
-Input:
-Output:
+SPEC 2:  If change due is divisible by 5, but not 10, the user is given a nickel for each quotient of 5, in addition to the number of pennies equal to remaining change due
+Input:  9
+Output:  1 nickel, 4 pennies
+
+SPEC 3:  If change due is divisible by 10, but not 25, the user is given a dime for each quotient of 10, and remaining change given in accordance with Specs 1 & 2
+Input:  18
+Output:  1 dime, 1 nickel, 3 pennies
+
+SPEC 4:  If change due is divisible by 25, the user is given 1 quarter for each quotient of 25, and remaining change given in accordance with Specs 1-3
+Input:  42
+Output:  1 quarter, 1 dime, 1 nickel, 2 pennies
+
+SPEC 4:  Amounts exceeding .99 are unacceptable
+Input:  103
+Output:  'The amount entered exceeds $1.00
