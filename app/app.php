@@ -1,11 +1,11 @@
 <?php
     require_once __DIR__.'/../vendor/autoload.php';
     require_once __DIR__.'/../src/Coin.php';
-    use Symfony\Component\Debug\Debug;
-    Debug::enable();
+    // use Symfony\Component\Debug\Debug;
+    // Debug::enable();
 
     $app = new Silex\Application();
-    $app['debug'] = TRUE;
+    // $app['debug'] = TRUE;
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
 
     $app->get('/', function () use ($app)
